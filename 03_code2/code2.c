@@ -24,12 +24,12 @@ int main(void) {
   int numStars;
   printf("Here is a triangle with height 4\n");
   numStars = printTriangle(4);
-  printf("That trangle had %d total stars\n", numStars);
+  printf("That triangle had %d total stars\n", numStars);
   //now print "Here is a triangle with height 7\n"
   printf("Here is a trangle with height 7\n");
   //then call printTriangle, passing in 7, and assign the result to numStars
   numStars=printTriangle(7);
-  printf("That trangle had %d total stars\n",numStars);
+  printf("That triangle had %d total stars\n",numStars);
   //finally, print "That triangle had %d total stars\n", such that the %d 
   //prints the value of numStars
   
