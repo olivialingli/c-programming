@@ -22,23 +22,22 @@
  3. Write the function 
       void retirement (int startAge,   //in months
                        double initial, //initial savings in dollars
-                       retire_info working, //info about working
+                      retire_info working, //info about working
                        retire_info retired) //info about being retired
 
    This function should perform two tasks (which are similar---look
    for a chance to abstract something out into a function!).
-  
    First, it should compute your retirement account balance each 
    month while you are working.  To do this, you need to calculate
-   the account balance increase from returns (balance * rate of return),
+   the account balace increase from returns (balance * rate of return),
    and add that to the current balance.  You then need to add the
    monthly contribution to the balance.
-   For example, if you have $1,000 in the account, earn a 0.5% rate of
+   For example, 
+if you have $1,000 in the account, earn a 0.5% rate of
    return per month, and contribute $100 per month, you would
    cmopute 1000 * 0.005 = $5 in interest earned.  You would then
    add this plus the monthly contribution to the balance to end up
    with $1105 in the account at the end of the month.
-
    At the start of each month (before the balance changes), you should
    print out the current balance with the following format:
     "Age %3d month %2d you have $%.2lf\n"
