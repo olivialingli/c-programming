@@ -5,7 +5,7 @@ with more broken implementations.
 You can find the correct implementation of the program at
 
 /usr/local/l2p/match5/correct-match5
-
+ 
 This program determines who wins a very simple "card game".  This "game"
 is played with 5 "cards" per player and 2 players.  A "card" in this
 game is an ASCII character (so 'x' 'a' '!' '7' '$' etc are all valid cards).
