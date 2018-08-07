@@ -114,19 +114,19 @@ card_t card_from_num(unsigned c) {
   card_t temp;
   if(c<14){
     temp.suit=SPADES;
-    temp.value=c+1;
+    temp.value=c+2;
   }
   if(14<=c&&c<28){
     temp.suit=HEARTS;
-    temp.value=c%14+1;
+    temp.value=c%14+2;
   }
   if(28<=c&&c<42){
     temp.suit=DIAMONDS;
-    temp.value=c%28+1;
+    temp.value=c%28+2;
   }
   if(42<=c){
     temp.suit=CLUBS;
-    temp.value=c%42+1;
+    temp.value=c%42+2;
   }
   return temp;
 }
