@@ -28,7 +28,7 @@ In the meantime, you can test your functions
 for this assignment by writing any code you
 want in my-test-main.c.  If you do "make"
 (or "make test") then the included Makefile
-will build this and link it with your cards.o
+vwill build this and link it with your cards.o
 (compiling that if needed).
 
 To get started, take a look at cards.h.
@@ -58,7 +58,6 @@ to a string.
 
 Last are some function prototypes.
 You will write each of these in cards.c.
-
 Now go into cards.c, and write each of these
 functions.  Here are the specifics: 
 
