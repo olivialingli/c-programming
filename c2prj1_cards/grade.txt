@@ -1,30 +1,7 @@
-Grading at Tue Aug  7 03:44:49 UTC 2018
+Grading at Tue Aug  7 03:47:47 UTC 2018
 Compiling cards.c
 Testing card_from_letters
-For card_from_letters('0','c'), I expected 0c but got Ac
-For card_from_letters('0','d'), I expected 0d but got Ad
-For card_from_letters('0','h'), I expected 0h but got Ah
-For card_from_letters('0','s'), I expected 0s but got As
 For card_from_letters('2','c'), I expected 2c but got 0c
-For card_from_letters('3','c'), I expected 3c but got 2c
-For card_from_letters('4','c'), I expected 4c but got 3c
-For card_from_letters('5','c'), I expected 5c but got 4c
-For card_from_letters('6','c'), I expected 6c but got 5c
-For card_from_letters('7','c'), I expected 7c but got 6c
-For card_from_letters('8','c'), I expected 8c but got 7c
-For card_from_letters('9','c'), I expected 9c but got 8c
-For card_from_letters('J','c'), I expected Jc but got Ac
-For card_from_letters('J','d'), I expected Jd but got Ad
-For card_from_letters('J','h'), I expected Jh but got Ah
-For card_from_letters('J','s'), I expected Js but got As
-For card_from_letters('K','c'), I expected Kc but got Ac
-For card_from_letters('K','d'), I expected Kd but got Ad
-For card_from_letters('K','h'), I expected Kh but got Ah
-For card_from_letters('K','s'), I expected Ks but got As
-For card_from_letters('Q','c'), I expected Qc but got Ac
-For card_from_letters('Q','d'), I expected Qd but got Ad
-For card_from_letters('Q','h'), I expected Qh but got Ah
-For card_from_letters('Q','s'), I expected Qs but got As
 Failed
 
 Overall Grade: FAILED
