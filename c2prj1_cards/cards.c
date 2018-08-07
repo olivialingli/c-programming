@@ -10,23 +10,23 @@ void assert_card_valid(card_t c) {
 
 const char * ranking_to_string(hand_ranking_t r) {
   switch(r){
-    case STRAIGHT_FLUSH
+  case STRAIGHT_FLUSH:
       return "STRAIGHT FLUSH";
-    case FOUR_OF_A_KIND
+  case FOUR_OF_A_KIND:
       return "FOUR OF A KIND";
-    case FULL_HOUSE
-      returen "FULL HOUSE";
-    case FLUSH
+  case FULL_HOUSE:
+      return "FULL HOUSE";
+  case FLUSH:
       return "FLUSH";
-    case STRAIGHT
+  case STRAIGHT:
       return "STRAIGHT";
-    case THREE_OF_A_KIN)
+  case THREE_OF_A_KIND:
       return "THREE OF A KIND";
-    case TWO_PAIR
+  case TWO_PAIR:
       return "TWO PAIR";
-    case PAIR
+  case PAIR:
       return "PAIR";
-    case NOTHING
+  case NOTHING:
       return "NOTHING";
     }   
 }
@@ -35,15 +35,15 @@ char value_letter(card_t c) {
   if(c.value<10)
     return '0'+c.value
   switch (c.value){
-    case 10
+  case 10:
       return '0';
-    case Jack
+  case Jack:
       return 'J';
-    case Queen
+  case Queen:
       return 'Q';
-    case King
+  case King:
       return 'K';
-    case Ace
+  case Ace:
 o      return 'A';
   }
 }
@@ -51,13 +51,13 @@ o      return 'A';
 
 char suit_letter(card_t c) {
   switch(c.suit){
-    case SPADES
+  case SPADES:
       return 's';
-    case HEARTS
+  case HEARTS:
       return 'h';
-    case DIAMONDS
+  case DIAMONDS:
       return 'd';
-    case CLUBS
+  case CLUBS:
       return 'c';
   }
 }
@@ -68,28 +68,28 @@ void print_card(card_t c) {
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
-  if(value_let-0<10&&valuelet-0>0)
+  if(value_let-0<10&&value_let-0>0)
     temp.value=value_let-0;
   switch(value_let){
-    case '0'
+  case '0':
       temp.value=10;
-    case 'J'
+  case 'J':
       temp.value=11;
-    case 'Q'
+  case 'Q':
       temp.value=12;
-    case 'K'
+  case 'K':
       temp.value=13;
-    case 'A'
+  case 'A':
       temp.value=14;
   }
   switch(suit_let){
-    case 's'
+  case 's':
       temp.suit="SPADES";
-    case 'h'
+  case 'h':
       temp.suit="HEARTS";
-    case 'd'
+  case 'd':
       temp.suit="DIAMONDS";
-    case 'c'
+  case 'c':
       temp.suit="CLUBS";
   }
   assert_card_valid(temp);
