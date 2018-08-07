@@ -118,15 +118,15 @@ card_t card_from_num(unsigned c) {
   }
   if(13<=c&&c<26){
     temp.suit=HEARTS;
-    temp.value=c%13;
+    temp.value=c%13+2;
   }
   if(26<=c&&c<39){
     temp.suit=DIAMONDS;
-    temp.value=c%26;
+    temp.value=c%26+2;
   }
   if(39<=c){
     temp.suit=CLUBS;
-    temp.value=c%39;
+    temp.value=c%39+2;
   }
   return temp;
 }
