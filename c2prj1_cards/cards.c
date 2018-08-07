@@ -28,7 +28,8 @@ const char * ranking_to_string(hand_ranking_t r) {
       return "PAIR";
   case NOTHING:
       return "NOTHING";
-    }   
+    }
+  return "";
 }
 
 char value_letter(card_t c) {
@@ -37,14 +38,14 @@ char value_letter(card_t c) {
   switch (c.value){
   case 10:
       return '0';
-  case Jack:
+  case VALUE_JACK:
       return 'J';
-  case Queen:
+  case VALUE_QUEEN:
       return 'Q';
-  case King:
+  case VALUE_KING:
       return 'K';
-  case Ace:
-o     return 'A';
+  case VALUE_ACE:
+      return 'A';
   default:
       return 0;
   }
@@ -102,7 +103,6 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 card_t card_from_num(unsigned c) {
   card_t temp;
-  int i=0;
   if(0<=c&&c<13){
     temp.suit=SPADES;
     temp.value=c%1;
