@@ -73,7 +73,7 @@ void print_card(card_t c) {
 
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
-  if(value_let-0<10&&value_let-0>0)
+  if(value_let-'0'<10&&value_let-'0'>0)
     temp.value=value_let-'0';
   switch(value_let){
   case '0':
