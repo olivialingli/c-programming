@@ -33,7 +33,7 @@ const char * ranking_to_string(hand_ranking_t r) {
 
 char value_letter(card_t c) {
   if(c.value<10)
-    return '0'+c.value
+    return '0'+c.value;
   switch (c.value){
   case 10:
       return '0';
@@ -44,7 +44,9 @@ char value_letter(card_t c) {
   case King:
       return 'K';
   case Ace:
-o      return 'A';
+o     return 'A';
+  default:
+      return 0;
   }
 }
 
@@ -59,6 +61,8 @@ char suit_letter(card_t c) {
       return 'd';
   case CLUBS:
       return 'c';
+  default:
+      return 0;
   }
 }
 
@@ -69,7 +73,7 @@ void print_card(card_t c) {
 card_t card_from_letters(char value_let, char suit_let) {
   card_t temp;
   if(value_let-0<10&&value_let-0>0)
-    temp.value=value_let-0;
+    temp.value=value_let-'0';
   switch(value_let){
   case '0':
       temp.value=10;
@@ -84,13 +88,13 @@ card_t card_from_letters(char value_let, char suit_let) {
   }
   switch(suit_let){
   case 's':
-      temp.suit="SPADES";
+      temp.suit=SPADES;
   case 'h':
-      temp.suit="HEARTS";
+      temp.suit=HEARTS;
   case 'd':
-      temp.suit="DIAMONDS";
+      temp.suit=DIAMONDS;
   case 'c':
-      temp.suit="CLUBS";
+      temp.suit=CLUBS;
   }
   assert_card_valid(temp);
   return temp;
@@ -100,19 +104,19 @@ card_t card_from_num(unsigned c) {
   card_t temp;
   int i=0;
   if(0<=c&&c<13){
-    temp.suit="SPADES";
+    temp.suit=SPADES;
     temp.value=c%1;
   }
   if(13<=c&&c<26){
-    temp.suit="HEARTS";
+    temp.suit=HEARTS;
     temp.value=c%13;
   }
   if(26<=c&&c<39){
-    temp.suit="DIAMONDS";
+    temp.suit=DIAMONDS;
     temp.value=c%26;
   }
   if(39<=c&&c<52){
-    temp.suit="CLUBS";
+    temp.suit=CLUBS;
     temp.value=c%39;
   }
   return temp;
