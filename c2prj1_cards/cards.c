@@ -116,17 +116,17 @@ card_t card_from_num(unsigned c) {
     temp.suit=SPADES;
     temp.value=c+2;
   }
-  if(13<=c&&c<27){
+  if(13<=c&&c<26){
     temp.suit=HEARTS;
     temp.value=c%14+2;
   }
-  if(27<=c&&c<41){
+  if(26<=c&&c<39){
     temp.suit=DIAMONDS;
-    temp.value=c%28+2;
+    temp.value=c%27+2;
   }
-  if(41<=c){
+  if(39<=c){
     temp.suit=CLUBS;
-    temp.value=c%42+2;
+    temp.value=c%40+2;
   }
   return temp;
 }
