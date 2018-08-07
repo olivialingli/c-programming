@@ -128,11 +128,5 @@ card_t card_from_num(unsigned c) {
     temp.suit=CLUBS;
     temp.value=c%39+1;
   }
-  switch(temp.value){
-  case 10:
-    return temp.value=0;
-    break;
-  case 11:
-    return temp.value=VALUE_JACK
   return temp;
 }
