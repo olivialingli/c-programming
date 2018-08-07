@@ -1,22 +1,65 @@
-Grading at Tue Aug  7 06:47:54 UTC 2018
+Grading at Tue Aug  7 06:50:44 UTC 2018
 Compiling cards.c
-cards.c: In function ‘card_from_num’:
-cards.c:133:12: error: incompatible types when returning type ‘unsigned int’ but ‘card_t {aka struct card_tag}’ was expected
-     return temp.value=0;
-            ^
-cards.c:136:12: error: incompatible types when returning type ‘unsigned int’ but ‘card_t {aka struct card_tag}’ was expected
-     return temp.value=VALUE_JACK
-            ^
-cards.c:137:3: error: expected ‘;’ before ‘return’
-   return temp;
-   ^
-cards.c:138:1: error: expected declaration or statement at end of input
- }
- ^
-cards.c:138:1: error: control reaches end of non-void function [-Werror=return-type]
- }
- ^
-cc1: all warnings being treated as errors
-Could not compile your card.c!
+Testing card_from_letters
+Passed
+Testing value_letter and suit_letter
+Passed
+Testing print_card
+Passed
+Testing card_from_num
+When I use card_from_num on numbers 0<= i < 52
+I expect to see each card exactly once, but I see:
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1s
+1h
+2h
+3h
+4h
+5h
+6h
+7h
+8h
+9h
+0h
+Jh
+Qh
+Kh
+1d
+2d
+3d
+4d
+5d
+6d
+7d
+8d
+9d
+0d
+Jd
+Qd
+Kd
+1c
+2c
+3c
+4c
+5c
+6c
+7c
+8c
+9c
+0c
+Jc
+Qc
+Kc
 
 Overall Grade: FAILED
