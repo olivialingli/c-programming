@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>		//include header files
+
+int main() {
+	int i = 0, j=0, k=0;
+	float temp;		//varialbel for temprary value store
+	float a[1000];		//store all the input values
+	char ch;		
+
+	while ((ch=getchar())!='\n')		//insert values until enter key
+		scanf("%1.2f", &a[++i]);		//store values in a[]
+	for (j=0;j<i;j++){					//bubble sort algorithm, sort from least to greatest
+		for (k = 0; k < i-1; k++) {		//change smaller neighbour to front, loop to check every former value 
+			if (a[k + 1] < a[k]) {
+				temp = a[k];
+				a[k] = a[k + 1];
+				a[k + 1] = temp;
+			}
+		}
+	}
+	j = 0;
+	for(j=0;j<i;j++)					//get the output, each value a line, from least to greatest
+		printf("%1.2f\n", a[i]);
+	return 0;
+}
